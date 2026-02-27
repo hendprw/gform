@@ -1,0 +1,12 @@
+{
+  "name": "gform-ticket-sender",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7",
+    "qrcode": "^1.5.3"
+  }
+}
