@@ -276,7 +276,7 @@ app.post('/webhook', async (req, res) => {
         const sendEmailPromise = transporter.sendMail({
             from: `"${EVENT.organizerName}" <${GMAIL_USER}>`,
             to: email,
-            subject: `🎟️ Tiket & Jadwal: ${EVENT.title}`,
+            subject: `Tiket & Jadwal: ${EVENT.title}`,
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden;">
                     <div style="background-color: #0f172a; padding: 30px; text-align: center;">
@@ -309,7 +309,7 @@ app.post('/webhook', async (req, res) => {
         let sendWaPromise = Promise.resolve(); // Default resolve jika tidak ada HP
         
         if (noHp) {
-            const waMessage = `*Halo ${nama}* 👋\n\nSelamat! Pendaftaran Anda untuk *${EVENT.title}* berhasil.\n\n📅 Tanggal: ${EVENT.dateString}\n⏰ Jam: ${EVENT.timeString}\n📍 Lokasi: ${EVENT.location}\n🎟️ Kode Tiket: *${ticketCode}*\n\nBerikut kami lampirkan E-Ticket Anda. Mohon dibawa saat acara berlangsung.\n\nSalam,\n${EVENT.organizerName}`;
+            const waMessage = `*Halo ${nama}* 👋\n\nSelamat! Pendaftaran Anda untuk *${EVENT.title}* berhasil.\n\n📅 Tanggal: ${EVENT.dateString}\n⏰ Jam: ${EVENT.timeString}\n📍 Lokasi: ${EVENT.location}\n🎟️ Kode Tiket: *${ticketCode}*\n\n*JOIN:* https://chat.whatsapp.com/EqCgOmIAbNkI9V3ECUkLr6\n\n Kami juga melampirkan E-Ticket Anda melalui email. Mohon dibawa saat acara berlangsung.\n\nSalam,\n${EVENT.organizerName}`;
             
             // Kirim Pesan + File PDF Tiket
             sendWaPromise = sendWhatsappFonnte(noHp, waMessage, ticketPdfBuffer, `Tiket-${ticketCode}.pdf`);
