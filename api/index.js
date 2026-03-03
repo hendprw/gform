@@ -19,15 +19,15 @@ const GMAIL_PASS = process.env.GMAIL_APP_PASSWORD; // App Password Gmail
 // Detail Event
 const EVENT = {
     title: "Ramadhan Impact Day 2026",
-    location: "Lab TIA, Teknik Informatika (Eksak lt.3)",
+    location: "Lab TIA (Rekayasa Data Aplikasi), Teknik Informatika (Eksak lt.3)",
     dateString: "8 Maret 2026",
-    timeString: "15:00 - 18:00 WIB",
+    timeString: "15:30 - 17:30 WIB",
     // Format tanggal ICS: [Tahun, Bulan, Tanggal, Jam, Menit]
-    icsDate: [2026, 3, 8, 15, 0], 
+    icsDate: [2026, 3, 8, 15, 30], 
     duration: { hours: 3, minutes: 0 },
     logoUrl: "https://i.ibb.co.com/6cxn98gN/Desain-tanpa-judul-18-1.png", // Logo opsional
     organizerName: "Koalisi Community",
-    organizerEmail: "admin@koalisi.info"
+    organizerEmail: "083139682650"
 };
 
 // ==========================================
